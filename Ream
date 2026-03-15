@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page title that shows on browser tab -->
+  <title>KISS</title>
+  
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Internal CSS for smooth scrolling and header offset -->
+  <style>
+    /* Enable smooth scrolling when clicking anchor links */
+    html {
+      scroll-behavior: smooth; /* Makes page scroll smoothly instead of jumping */
+    }
+
+    /* Add padding to all sections to prevent fixed header from covering content */
+    section {
+      padding-top: 140px; /* Same height as fixed header */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- KISS-THEMED BUTTONS (external link) -->
+  <div class="kiss-buttons">
+    <!-- Opens the official KISS website in a new tab -->
+    <a href="https://www.kissonline.com/" target="_blank" class="kiss-btn">
+      Kiss websida
+    </a>
+  </div>
+
+  <!-- Header section -->
+  <header class="header">
+    <!-- Logo links to home section -->
+    <a href="#home" ></a>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <!-- Anchor links to sections using their IDs -->
+      <a href="#home">Home</a> <!-- Scrolls to Home section -->
+      <a href="#about">About</a> <!-- Scrolls to About section -->
+      <a href="#music">Music</a> <!-- Scrolls to Music section -->       
+      <a href="#interviews">Interviews</a> <!-- Scrolls to Interviws section -->
+      <a href="#bookings">Bookings</a> <!-- Scrolls to Bookings section -->
+      <a href="#images">Images</a> <!-- Scrolls to Images section -->
+      <a href="#sources">Sources</a> <!-- Scrolls to Sources section -->
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <!-- Container for home content, centered text -->
+    <div class="home-content">
+      <h1>Kiss</h1> <!-- Main headline -->
+      <h2>
+        Hello and welcome to the ultimate Kiss fan page 
+        <span class="text"></span>
+      </h2>
+      <p>
+        Where you can discover the band's entire history from the very beginning, from how it all began to how it all ended. 
+        Discover the legendary members behind the band and their music. Check out photos of the band and those who were in the band. 
+        Find out if you can book them for events.Read more about them in sources to explore even more about your favorite rock icons.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="About">
+    <div class="About-content">
+      <h1>About KISS</h1> <!-- Section headline -->
+      
+      <!-- Paragraph describing the band -->
+      <p>
+        <strong>KISS</strong> was an American rock band from 1973. In 2023.
+        Kiss announced during a concert that they had played their last gig, 
+        after 50 years as a band. In 1972, Simmons and Stanley were members of Wicked Lester, 
+        a rock and roll band based in Queens, New York.
+      </p>
+
+      <div class="about-images">
+      <img src="https://www.rollingstone.com/wp-content/uploads/2018/06/rs-14811-kiss-1800-1395690154.jpg?w=1581&h=1054&crop=1" alt="Kiss live 1">
+      <img src="https://grantland.com/wp-content/themes/espn-grantland/specials/chuck-klosterman-kiss-hall-of-fame/images/photo_3.jpg" alt="Kiss live 2">
+      </div>
+
+      <h2>Members</h2> <!-- Subheading for members -->
+
+      <!-- Details tag for collapsible member info -->
+      <details>
+        <summary>Paul Stanley – Vocals & Guitar</summary>
+        <p>
+          Paul Stanley, born Stanley Bert Eisen on January 20, 1952, in New York, is an American musician best known for founding the rock band Kiss, where he was the frontman, rhythm guitarist, and co-lead vocalist. 
+          He created his stage persona "The Starchild", one of the most famous characters among Kiss fans. 
+          Stanley was one of the main songwriters in Kiss and contributed to many of the band's most popular songs. 
+          He was in the band from its inception in 1973 until its breakup in 2023. Stanley has also had his own career and released his first album in 1978 and followed up with Live to Win in 2006. 
+          After Kiss's breakup, he continued with music, including with Paul Stanley's Soul Station, which interprets classic soul and R&B songs. 
+          He has also continued his career as a painter and has had exhibitions of his works.(Wikipedia,2025, Paul Stanley).
+        </p>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/PaulStanleyOfKissWithPhilKonstantin_%28cropped%29.jpg">
+        <img src="https://www.rockerrags.com/product_images/uploaded_images/paul-stanley-starchild-singer-guitarist-kiss-heavy-metal-hard-classic-rock-roll-band-group.jpg">
+
+      </details>
+
+      <details>
+        <summary>Gene Simmons – Bass & Vocals</summary>
+        <p>
+          Gene Simmons, whose real name is Chaim Witz, was born on August 25, 1949, in Haifa, Israel. 
+          He is an Israeli-American musician best known as the bassist and co-founder of the rock band Kiss.
+          ​​He took his stage name after rockabilly musician Jumpin’ Gene Simmons and later became known as "The Demon".
+          Simmons is perhaps best known for his long tongue, which he often sticks out when performing, a gesture that has become one of his signatures. 
+          When performing with Kiss, he has always looked like a demon and has often featured things like fire breathing and spitting fake blood to deepen and convey his dark and theatrical image. 
+          He co-founded Kiss in 1973 and played with the band until their final show in 2023. (Wikipedia,2025, Gene Simmons).
+
+        </p>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gene_Simmons_2012.jpg/500px-Gene_Simmons_2012.jpg">
+        <img src="https://ca-times.brightspotcdn.com/dims4/default/33c211f/2147483647/strip/true/crop/5960x3973+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F34%2F64%2Fbab1b93f481481d2a148ef80e824%2F2021-tribeca-festival-biography-kisstory-premiere-62575.jpg">
+       
+      </details>
+
+      <details>
+        <summary>Ace Frehley – Lead Guitar</summary>
+        <p>
+       Ace Frehley, born Paul Daniel Frehley on April 27, 1951, in New York City, was an American guitarist, singer, and songwriter.
+        He was best known as the original guitarist and co-founder of the rock band Kiss. ​​Frehley's stage persona. 
+        "The Spaceman" or "Space Ace", replaced the classic character "The Starchild" or "The Demon" and became one of Kiss's most iconic characters. 
+        He left Kiss in 1982 and shortly thereafter formed the band Frehley's Comet, as well as releasing several solo albums, including the self-titled debut album in 1978, which sold platinum.
+        After reuniting with Kiss in 1996 and touring with them until 2002 after their "Farewell Tour" Frehley left the band again. His latest solo album, 10,000 Volts, was released in 2024. 
+        Frehley died on October 16, 2025, at the age of 74, in his home studio after suffering complications from a fall. (Wikipedia,2025, Ace Frehley).
+        </p>
+
+        <img src="https://www.svtstatic.se/image-news/992/wide/0.5/0.42/8ef8b337866e0dab4e557b01edb6d1ec2b6fe9e0d35c7a2f030134fa45bedb8e">
+        <img src="https://i.abcnewsfe.com/a/e7587a0b-12ec-4757-8fb4-c0f9cc08b1e4/ace-freyley-kiss-gty-jt-251016_1760642008924_hpMain_4x5.jpg?w=1500">
+
+      </details>
+
+      <details>
+        <summary>Peter Criss – Drums</summary>
+        <p>
+         Peter Criss, born George Peter John Criscuola, is best known as the original drummer and co-founder of the rock band Kiss.
+          ​​Criss was instrumental in the band's success with the ballad "Beth," which he both wrote and sang. During his time in the band,
+          he also developed a rough, jazz-influenced drumming style. Tensions and conflicts within the band led to Criss leaving Kiss in 1980.
+          He returned in the late 1990s for the acclaimed reunion tour and then played with the band until 2004. 
+          Kiss, with its theatrical style and mix of rock and spectacle, has left a strong mark on rock history, 
+          where Criss' contribution as both a musician and a visual icon is central. (Wikipedia,2025,Peter Criss).
+        </p>
+
+        <img src="https://www.billboard.com/wp-content/uploads/2025/04/peter-criss-raven-drum-foundation-2024-billboard-1548.jpg?w=942&h=628&crop=1">
+        <img src="https://www.emp-shop.se/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dwbdb4f49a/images/4/0/5/7/405781-emp.jpg?sw=1000&sh=800&sm=fit&sfrm=png">
+
+      </details>
+
+      </div>
+
+    </section>
+ <!-- Music Section -->
+  <section id="music" class="music">
+    <!-- Container for Music content, centered text -->
+    <div class="Music-content">
+    <h1>Music</h1> <!-- Section headline -->
+
+    <p>
+     Here you can explore some of Kiss’s most legendary songs, all linked so you can listen as you read. 
+     From the electrifying rockers to the powerful ballads, each song provides an insight into the band’s unique style and energy. 
+     Whether you’re a longtime fan or new to their music, this guide will allow you to step into the world of Kiss and experience their legendary rock sound firsthand. 
+    </p>
+
+    <h2>Songs</h2> <!-- Subheading for members -->
+
+    <details>
+    <summary>reason to live - 1987</summary>
+        <p>
+          "Reason to Live" is a power ballad by American rock band Kiss, released as a single on November 12, 1987. 
+          The song is from the album Crazy Nights and was written by the band's frontman, Paul Stanley, together with well-known songwriter Desmond Child. 
+          The album was produced by Ron Nevison, who previously worked with, among others, Led Zeppelin and Heart.The music video, directed by Marty Callner, 
+          shows the band performing the song in front of a large, illuminated stage, alternating with scenes of a young woman, played by model Eloise Broady, dealing with a stormy relationship with Stanley. 
+          In the video, she is seen, among other things, throwing a wine bottle and burning a photo, as well as setting fire to a Porsche 928, a car Stanley had received as a gift from Gene Simmons. 
+          The scenes were filmed at the Orange Pavilion in San Bernardino and in Hollywood, California. Despite extensive play on MTV, "Reason to Live" only reached number 64 on the Billboard Hot 100 and 34 on the Mainstream Rock Tracks in the United States. 
+          The single peaked at number 33 on the UK Singles Chart. The song became one of Kiss' most prominent ballads and a hallmark of their late 1980s style. (Wikipedia, 2025, Reason to Live)
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Reason_To_Live_cover.jpg">
+        
+    </details>
+
+    <details>
+    <summary>Uh all night</summary>
+         <p>
+            Uh! All Night from KISS's album Asylum (1985) is a steamy and catchy song that is often noticed when listening to the album and therefore you feel lighthearted about the steamy and lustful feeling that captures one's best attention for a second single release after the slightly more noticed song Tears Are Falling. 
+            The music video for the song, directed by David Mallet, is a noble variation on an "80s video" and contains choreographed dance numbers with older women and new young girls dancing, but has been criticized over the years for objectifying women by portraying them as "ballbreakers" on the screens and embodying stereotypical female characters. However, it still happens that the band's musical performances, and not least the guitar solo, receive a lot of praise. 
+            The video is definitely not unnoticed, because something handlady radiates all the way to the right of the image and it is perhaps even too prominent to be perceived as sensitive by some
+            In summary, Uh! All Night is a steamy song that is hard to forget, a beautiful object of KISS's playful and melodic side in the mid-1980s. (Mikeladano,2022, Uh all night).
+         </p>
+        <img src="https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2F6a03edf2e9f5ac0a4d5ff229b47b8f63.1000x1000x1.jpg">
+    </details>
+
+    <details>
+    <summary>Lick me up</summary>
+        <p>
+            “Lick It Up" is a song by American rock band KISS, released as a single on September 18, 1983, from the band's eleventh studio album of the same name. 
+            The song was written by Paul Stanley and Vinnie Vincent and was a new beginning for the band, as it was their first single without makeup since 1979. Musically, the song is energetic and moves within the genres of glam metal, pop metal and hard rock, and the drive of the song reflected the band's new, unadorned image. 
+            The recording was made in the summer of 1983 at New York's Right Track Studios and the song was produced by Michael James Jackson together with Stanley and Simmons.
+             The song only peaked at number 66 on the Billboard Hot 100 in the United States, but became a top 40 hit in the United Kingdom and some other countries. The music video, the band's first without makeup, premiered on MTV the same day the single was released, thus becoming a visual breakthrough for the band. 
+             Lick It Up has since become one of the songs that KISS has played the most live. (Wikipedia.org, 2025, Lick it up)
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Lick_it_up_cover.jpg">
+    </details>
+
+    <details>
+    <summary>Jungle</summary>
+         <p>
+           "Jungle" is a single by American rock band KISS, released in 1997 as part of their studio album Carnival of Souls: The Final Sessions. 
+           The song was written by Paul Stanley, Bruce Kulick, and Curtis Cuomo, and is the longest song the band has ever recorded for a studio album, with a duration of 6 minutes and 49 seconds. 
+           The song has been described musically as having a "semi-funky grunge-lite riff" reminiscent of Collective Soul's hit "Shine".
+           Despite little promotion, "Jungle" reached number 8 on the Mainstream Rock Tracks chart in the United States. It also received the Metal Edge Readers' Choice Award for Song of the Year in 1997. 
+           KISS never actually performed the song live, but it was later interpreted by Bruce Kulick and Eric Singer as part of the Eric Singer Project and is also featured on the DVD Live at the Marquee.(Wikipedia.org. 2025,Jungle)
+         </p>
+         <img src="https://upload.wikimedia.org/wikipedia/en/0/08/Jungle.kiss.jpg">
+    </details>
+
+    <details>
+    <summary>You make me rock hard</summary>
+         <p>
+           "(You Make Me) Rock Hard" is a single by American rock band KISS, released in December 1988. The song was included on their compilation album Smashes, Thrashes & Hits. 
+           The song was written by Paul Stanley, Desmond Child, and Diane Warren, and was one of two new songs on the album, the other being "Let's Put the X in Sex".
+           The song was recorded in July 1988 by Paul Stanley working alone at Right Track Studios in New York City. The song was characterized by a danceable beat and the use of keyboards, which led some fans to wonder what direction the band was taking musically.
+           "(You Make Me) Rock Hard" received attention for its music video, which ranked at number 8 on Classic Rock's list of the best hard rock videos.
+           KISS never deviated from the "(You Make Me) Rock Hard" song when they played live, but Bruce Kulick and Eric Singer later reinterpreted it as part of the Eric Singer Project, and it was included on their DVD Live at the Marquee.(Wikipedia.org. 2025, You make me rock hard)
+         </p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/10/%28You_Make_Me%29_Rock_Hard.jpg">
+    </details>
+    </div>
+  </section>
+
+  <!-- interviews Section -->
+<section id="interviews" class="interviews">
+  <div class="interviews-content">
+    <h1>Interviews</h1>
+    <p>
+      KISS is more than just a band, they are one of rock’s greatest icons, renowned for their spectacular stage shows, distinctive face paint, and timeless hits. For decades, 
+      fans around the world have been captivated by the band, and their music and persona have become part of popular culture.
+      On this page, we take you behind the scenes with four unique video interviews and a vintage live performance that capture the band’s energy, creativity, 
+      and history. From early tours to personal reflections from the band members, you’ll get a glimpse into the band’s exclusive dynamics both on and off stage. 
+      Whether you’re curious about the band’s iconic career or want to relive classic moments, this is your chance to see KISS up close.
+
+    </p>
+
+    <details>
+        <summary> KISS interview in Countdown – Molly Meldrum 1980</summary>
+        <p>
+          In this interview in the Australian Countdown, band member Molly Meldrum meets KISS during their Australian tour in 1980. The interview delves into the band's sibling dynamic, their perspective on rock music, and more. 
+          One of the first documentations of the band in Australia, and a hint of the success they enjoyed during the period. (YouTube,2025, KISS interview (1980) | Countdown 50 Years On | ABC iview)
+        </p>
+    </details>
+
+    <details>
+        <summary> Peter Criss interview – KISS Expo 1994</summary>
+        <p>
+          Peter Criss, the original drummer in the band, during an interview at KISS Expo 1994, talks in detail about his time in the band, venturing into a reflection on the successes and setbacks he has experienced over the years.
+          The interview is very valuable for the KISS enthusiast who wants to hear Criss' version of the band's history.(YouTube, 2023, Peter Criss - 1994 Interview NY / NJ KISS Expo)
+        </p>
+    </details>
+
+    <details>
+        <summary> Paul Stanley in Nyhetsmorgon – TV4 (2013)</summary>
+        <p>
+          In TV4's Nyhetsmorgon 2013, Maria Forsblom meets Paul Stanley, one of the founders of KISS, before the band's concert at Friends Arena in Stockholm that same year. Stanley talks about the band's long career, what a concert with them is like, and the passion they still have for music. 
+          The interview takes us into how the band sees their own history with rock and in relation to Swedish fans.(YouTube,2014, Nyhetsmorgon got the only TV interview with Kiss - Nyhetsmorgon (TV4))
+        </p>
+    </details>
+
+    <details>
+        <summary> KISS – Rock and Roll All Nite (Live 1975)</summary>
+        <p>
+         Here we see a live clip from KISS's performance with one of their most famous songs, Rock and Roll All Nite, from 1975. The song, which would become one of their signatures, is performed as usual with all the energy and theatricality that alternately characterizes the band's live shows. 
+         A closer study of their ability to capture the audience and create memorable concerts. (YouTube, 2023, Kiss: Satanik Kreatures: Interviews 1979)
+        </p>
+    </details>
+  </div>
+</section>
+
+  <!-- bookings Section -->
+<section id="bookings" class="bookings">
+  <div class="bookings-content">
+      <h1>Bookning</h1>
+
+      <p>
+       KISS avslutade officiellt sin turnéverksamhet efter den legendariska sista konserten på "End of the Road World Tour" den 2 december 2023 på Madison Square Garden i New York City.<br><br>
+
+Den klassiska lineupen i full makeup är inte längre tillgänglig för bokning av liveframträdanden, konserter, företagsevent, privata spelningar eller traditionella turnéer – bandet har hållit sitt löfte om att sluta med fysisk turnéverksamhet.<br><br>
+
+Med det sagt gjorde KISS en sällsynt och speciell comeback 2025! Mellan 14–16 november på Virgin Hotels Las Vegas hölls eventet "KISS Kruise: Land-Locked In Vegas" (som firade KISS Armys 50-årsjubileum) med unmasked framträdanden av Paul Stanley, Gene Simmons, Tommy Thayer och Eric Singer. (Bookingentertainment.com, 2025, Kiss, Pophouse, 2025,Kiss Avatar project ochKissonline.com, 2025, Kiss ) <br>
+Fans fick njuta av både akustiska och elektriska set, där före detta gitarristen Bruce Kulick joinade som specialgäst på delar av showen.<br> (Pophouse, 2025,Kiss Avatar project)
+Det var en intim fanfest med Q&As, paneler, tributeband och mer – en äkta once-in-a-lifetime-upplevelse för KISS Army. (Bookingentertainment.com, 2025, Kiss, Pophouse, 2025,Kiss Avatar project ochKissonline.com, 2025, Kiss )<br><br>
+
+KISS framtid är digital och odödlig: I samarbete med Pophouse Entertainment (skaparna av ABBA Voyage) och Industrial Light & Magic utvecklar KISS banbrytande avatarshower. (Pophouse Entertainment,2025, KISS Avatar Project)<br>
+Dessa större-än-livet, eldsprutande digitala versioner av bandet kommer att leverera spektakulära framträdanden – "forever young and forever iconic". De första fulla avatarshowerna är planerade att lanseras <strong>2027</strong>, med pågående utveckling för att göra dem ännu mer fantastiska.(Bookingentertainment.com, 2025, Kiss, Pophouse, 2025,Kiss Avatar project ochKissonline.com, 2025, Kiss )<br><br>
+
+Notera: Vissa äldre bokningssajter ((Bookingentertainment.com, 2025)) kan fortfarande lista KISS som tillgängliga – denna information är föråldrad och speglar inte bandets nuvarande status. (Bookingentertainment.com, 2025, Kiss, Pophouse, 2025,Kiss Avatar project ochKissonline.com, 2025, Kiss )<br><br>
+
+      </p>
+
+    </div>
+  </section>
+
+  <!-- images Section -->
+<section id="images" class="images">
+  <div class="images-content">
+    <h1>images</h1>
+
+    <h2>
+      The images include old and new photos of the KISS members, both with and without makeup. 
+      One image depicts them winning awards, and another shows The Demons' blood effect, which reflects their stage aesthetic. 
+      There are also some images from their albums, which reflect the band's visual identity and musical development over time.
+      Together, the images reveal a lot about KISS's history, their creative expression, and how they have related to the audience over the years.
+    </h2>
+
+ <div class="gallery">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kiss_Cracow_2019.jpg/500px-Kiss_Cracow_2019.jpg">
+<img src="https://static.bonniernews.se/ba/265f5c3c-8a4d-4a8b-bba8-6bbf15f2c041.jpg?crop=2433%2C1369%2Cx327%2Cy99&width=1280&format=pjpg&auto=avif">
+<img src="https://i.pinimg.com/1200x/38/fd/1e/38fd1ebb45b72d353d9a288d073dd7a3.jpg">
+<img src="https://ew.com/thmb/UyPGmgyQzedYsKaMsaLXKSbhUYM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/kiss-Ace-Frehley-Paul-Stanley-Peter-Criss-Gene-Simmons-060625-a08ae4be0255458ab5bd7b9d780cb142.jpg">
+<img src="https://80tal.se/kiss/lickitup.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Kiss-Destroyer.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/dressed-to-kill-studio-front-1975.webp">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/rock-and-roll-over-studio-front-1976.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/alive-II-live-front-1977.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/paul-stanley-studio-front-1978.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/gene-simmons-studio-front-1978.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/peter-criss-studio-front-1978.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/ace-freshley-studio-front-1978.jpg">
+<img src="https://www.kissonline.com/wp-content/uploads/2025/03/unmasked-studio-front-1980.jpg">
+ </div>
+</div>
+</section>
+
+<!-- Sources Section -->
+<section id="sources" class="sources">
+  <div class="sources-content">
+    <h1>Sources</h1>
+
+    <p>
+      Wikipedia.org (2024) Reason to Live <br>
+      <a href="https://en.wikipedia.org/wiki/Reason_to_Live" target="_blank">https://en.wikipedia.org/wiki/Reason_to_Live</a> 
+      <span class="date">2025-10-05</span>
+      <br><br>
+
+      Wikipedia.org (2025) Gene Simmons <br>
+      <a href="https://en.wikipedia.org/wiki/Gene_Simmons" target="_blank">https://en.wikipedia.org/wiki/Gene_Simmons</a> 
+      <span class="date">2025-09-05</span>
+      <br><br>
+
+      Wikipedia.org (2025) Peter Criss <br>
+      <a href="https://en.wikipedia.org/wiki/Peter_Criss" target="_blank">https://en.wikipedia.org/wiki/Peter_Criss</a> 
+      <span class="date">2025-10-05</span>
+      <br><br>
+
+      Wikipedia.org (2025) Paul Stanley <br>
+      <a href="https://en.wikipedia.org/wiki/Paul_Stanley" target="_blank">https://en.wikipedia.org/wiki/Paul_Stanley</a> 
+      <span class="date">2025-10-05</span>
+      <br><br>
+
+      Wikipedia.org (2025) Ace Frehley <br>
+      <a href="https://en.wikipedia.org/wiki/Ace_Frehley" target="_blank">https://en.wikipedia.org/wiki/Ace_Frehley</a> 
+      <span class="date">2025-10-05</span>
+      <br><br>
+
+      Bookingentertainment.com (2025) Kiss<br>
+      <a href="https://www.bookingentertainment.com/artists/classic_rock/Kiss.php"target="_blank">https://www.bookingentertainment.com/artists/classic_rock/Kiss.php</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+      
+      YouTube (2025) KISS interview (1980) | Countdown 50 Years On | ABC iview<br>
+      <a href="https://www.youtube.com/watch?v=77ZcSkrEGBk"target="_blank">https://www.youtube.com/watch?v=77ZcSkrEGBk</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      YouTube (2023) Peter Criss - 1994 Interview NY / NJ KISS Expo<br>
+      <a href="https://www.youtube.com/watch?v=EC2UBk6ixUI"target="_blank">https://www.youtube.com/watch?v=EC2UBk6ixUI</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      YouTube (2014) Nyhetsmorgon got the only TV interview with Kiss - Nyhetsmorgon (TV4)<br>
+      <a href="https://www.youtube.com/watch?v=tDm80yozAIs "target="_blank">https://www.youtube.com/watch?v=tDm80yozAIs </a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      YouTube (2023) Kiss: Satanik Kreatures: Interviews 1979<br>
+      <a href="https://www.youtube.com/watch?v=JXIin_kMUto "target="_blank">https://www.youtube.com/watch?v=JXIin_kMUto </a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      Mikeladano (2022) Uh all night <br>
+      <a href="https://mikeladano.com/2022/04/14/uh-all-night/"target="_blank" rel="noopener noreferrer">Uh all night</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+     Wikipedia.org (2025) Lick it up<br>
+      <a href="https://en.wikipedia.org/wiki/Lick_It_Up "target="_blank" rel="noopener noreferrer">Lick it up</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+     Wikipedia.org (2025) Jungle<br>
+      <a href="https://en.wikipedia.org/wiki/Jungle_(Kiss_song)" target="_blank" rel="noopener noreferrer">Jungle</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      Wikipedia.org (2025) You make me rock hard<br>
+      <a href="https://en.wikipedia.org/wiki/(You_Make_Me)_Rock_Hard"target="_blank" rel="noopener noreferrer">You make me rock hard</a>
+      <span class="date">2025-10-17</span>
+      <br><br>
+
+      Blabbermouth.net (2025) KISS Kruise: Landlocked In Vegas updates<br>
+      <a href="https://blabbermouth.net/news/kisss-kiss-army-storms-vegas-event-to-transform-into-kiss-kruise-landlocked-in-vegas" target="_blank" rel="noopener noreferrer">Blabbermouth article on Vegas event</a>
+      <span class="date">2025-12-29</span>
+      <br><br>
+
+      Pophouse Entertainment (2025) KISS Avatar Project<br>
+      <a href="https://pophouse.se/" target="_blank" rel="noopener noreferrer">Pophouse official site</a>
+      <span class="date">2025-12-29</span>
+      <br><br>
+    </p>
+  </div>
+</section>
+
+  <!-- KISS member circles (pure CSS shapes) -->
+  <div class="kiss-circle tl starchild"></div> <!-- Starchild top-left -->
+  <div class="kiss-circle tr demon"></div>     <!-- Demon top-right -->
+  <div class="kiss-circle bl spaceman"></div>  <!-- Spaceman bottom-left -->
+  <div class="kiss-circle br catman"></div>    <!-- Catman bottom-right -->
+
+</body>
+</html>

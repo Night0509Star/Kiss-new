@@ -1,0 +1,973 @@
+/* --- RESET & BASE FONT --- */
+* {
+  margin: 0;                     /* Remove default margin from all elements */
+  padding: 0;                    /* Remove default padding from all elements */
+  box-sizing: border-box;        /* Include padding and border in element’s width/height */
+  font-family: "Times New Roman", serif; /* Set default font for text */
+}
+
+/* --- BODY / SUNSET BACKGROUND --- */
+body {
+  width: 100%;
+  min-height: 100%;               /* Ensure body can grow to fit content */
+  background: linear-gradient(     /* Custom sunset/metal gradient */
+    to right,
+    #000000 0%,
+    #8c2121 15%,
+    #ffd700 30%,
+    #ffffff 50%,
+    #ffd700 70%,
+    #8c2121 85%,
+    #000000 100%
+  );
+  position: relative;
+  overflow-y: auto;               /* Enable vertical scrolling */
+  font-family: 'Metal Mania', sans-serif;
+  scroll-behavior: smooth;        /* Smooth scrolling for anchor links */
+  color: #000;
+}
+
+/* ================================ */
+/* --- KISS THEME COLORS AND STYLE --- */
+:root {
+  --text-color: #000;               /* Main text color */
+  --outline-color: rgba(255, 255, 255, 0.6); /* Soft metallic outline */
+  --outline-strong: rgba(255, 0, 0, 0.4); /* Red glow effect on hover */
+  --accent-color: #b30000;          /* Deep red accent color */
+  --border-color: #555;             /* Metallic gray for borders */
+}
+
+/* --- HEADER --- */
+.header {
+  position: fixed;                  /* Keep header visible while scrolling */
+  top: 0; left: 0; width: 100%;
+  padding: 20px 15%;
+  background: transparent;          /* Show gradient behind header */
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 100;                     /* Stay above content */
+}
+
+.logo {
+  font-size: 40px; color: var(--text-color); font-weight: 800;
+  text-decoration: none; cursor: pointer;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px var(--outline-color), 0 0 10px rgba(150,150,150,0.5);
+}
+
+.logo:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--outline-strong), 0 0 20px rgba(255,0,0,0.5);
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  display: flex; align-items: center;
+}
+
+.navbar a {
+  display: inline-block; font-size: 18px; color: var(--text-color);
+  text-decoration: none; font-weight: 600;
+  margin-left: 25px; transition: .3s;
+  text-shadow: 0 0 20px var(--outline-color), 0 0 30px rgba(200,200,200,0.4);
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 30px var(--outline-strong), 0 0 20px rgba(255,0,0,0.6);
+}
+
+/* --- HOME SECTION --- */
+.home {
+  position: relative; width: 100%; height: 100vh;
+  padding-top: 140px; color: var(--text-color);
+}
+
+.home-content {
+  max-width: 700px; margin: 0 auto; text-align: center;
+}
+
+.home-content h1 {
+  font-size: 70px; font-weight: 900; margin-bottom: 30px; letter-spacing: 3px;
+  color: var(--text-color);
+  text-shadow: 0 0 6px var(--outline-color), 0 0 14px rgba(180,180,180,0.5);
+}
+
+.home-content h2 {
+  font-size: 36px; font-weight: 700; letter-spacing: 2px;
+  margin: 30px 0 20px 0; color: var(--text-color);
+  text-shadow: 0 0 5px var(--outline-color), 0 0 12px rgba(150,150,150,0.4);
+}
+
+.home-content h2 span {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--outline-strong), 0 0 20px rgba(255,0,0,0.5);
+}
+
+.home-content p {
+  font-size: 20px; line-height: 1.6; margin: 20px 0 30px 0;
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--outline-color), 0 0 10px rgba(180,180,180,0.4);
+}
+
+/* --- SOCIAL ICONS --- */
+.home-sci a {
+  display: inline-flex; justify-content: center; align-items: center;
+  width: 70px; height: 70px; background: transparent;
+  border: 2px solid var(--border-color); border-radius: 50%;
+  font-size: 32px; color: var(--text-color); text-decoration: none;
+  margin: 30px 10px; transition: .3s;
+  box-shadow: 0 0 8px rgba(100,100,100,0.4), 0 0 16px rgba(150,150,150,0.3);
+}
+
+.home-sci a:hover {
+  color: var(--accent-color); border-color: var(--accent-color);
+  box-shadow: 0 0 20px var(--outline-strong), 0 0 40px rgba(149,18,18,0.6);
+  transform: scale(1.15);
+}
+
+/* ======= ABOUT SECTION ======= */
+.About {
+  background-color: transparent; /* Make background see-through so gradient shows */
+  color: #000000;                   /* White text for contrast on dark gradient */
+  padding: 80px 20px;            /* Add vertical padding to space content from header */
+  text-align: left;
+}
+
+.About-content {
+  max-width: 800px;
+  margin: 0 auto;                /* Center content */
+  background: transparent;        /* Remove gray box */
+  padding: 0;                     /* Remove extra padding if not needed */
+  border-radius: 0;               /* Remove rounded corners */
+  box-shadow: none;               /* Remove shadow */
+}
+
+.About h1,
+.About h2 {
+  color: #000000; /* Ensure headings are readable over gradient */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.About p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #000000; /* Slightly lighter for paragraphs */
+}
+
+/* ======= MEMBER DETAILS ======= */
+details {
+  background-color: transparent; /* Remove gray background so gradient shows */
+  margin: 10px 0;
+  padding: 15px 0;              /* Optional: keep some padding for spacing */
+  border-radius: 0;             /* Remove rounded corners */
+  transition: background 0.3s;  /* Keep hover transition if needed */
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #000000;               /* Black summary text for visibility */
+}
+
+details:hover {
+  background-color: transparent; /* Remove hover gray background */
+}
+
+details[open] summary {
+  color: #000000;                  /* Black text when details is open */
+}
+
+details p {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #000000;                  /* Make paragraph text Black for contrast */
+}
+
+/* --- KISS BUTTONS (RESPONSIVE SPACING) --- */
+.kiss-buttons {
+  position: fixed;       /* Keeps the buttons visible even when scrolling */
+  bottom: 50px;          /* Distance from the bottom of the viewport */
+  right: 15%;            /* Same distance from the right as page content (10% of viewport width) */
+  display: flex;         /* Aligns multiple buttons in a row */
+  gap: 20px;             /* Space between multiple buttons */
+  justify-content: flex-end; /* Aligns buttons to the right side within their container */
+  z-index: 999;          /* Ensures buttons stay above other content */
+}
+
+/* === ABOUT SECTION IMAGE LAYOUT === */
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between images */
+  margin: 30px 0; /* space above and below the image pair */
+}
+
+.about-images img {
+  width: 48%; /* both images take up about half of the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Stack images vertically on smaller screens */
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+  }
+
+  .about-images img {
+    width: 100%;
+  }
+}
+
+.Music {
+  display: flex;                
+  justify-content: center;      
+  align-items: center;          
+  min-height: 100vh;            
+  text-align: center;           
+  background-color: transparent;
+  color: rgb(0, 0, 0);                 
+  padding: 2rem;                
+  scroll-margin-top: 140px; /* Ensures content is not hidden behind navbar */
+}
+
+.Music-content {
+  max-width: 800px;             /* Limits width for better readability */
+}
+
+.Music-content h1 {
+  margin-bottom: 20px;  
+}
+
+.Music-content h2 {
+  font-size: 36px; font-weight: 700; letter-spacing: 2px;
+  margin: 30px 0 20px 0; color: var(--text-color);
+  text-shadow: 0 0 5px var(--outline-color), 0 0 12px rgba(150,150,150,0.4);
+}
+
+.Music-content h2 span {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--outline-strong), 0 0 20px rgba(255,0,0,0.5);
+}
+
+.Music-content p {
+  line-height: 1.6;     
+}
+
+/* === GENERAL IMAGE STYLING === */
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* === DISPLAY IMAGES SIDE BY SIDE IN DETAILS === */
+details {
+  margin-top: 20px;
+}
+
+details p + img,
+details p + img + img {
+  width: 45%;
+  display: inline-block;
+  margin: 10px 2%;
+  vertical-align: top;
+}
+
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+details img {
+  width: 45%;
+  margin: 10px;
+}
+
+details > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Stack images vertically on smaller screens */
+@media (max-width: 768px) {
+  details > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  details img {
+    width: 100%;
+  }
+}
+
+/* Center text and general styling */
+.sources-content {
+  text-align: center;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.8;
+}
+
+/* Style for section headline */
+.sources-content h1 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Link styling */
+.sources-content a {
+  display: block; /* places link under text */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: link changes color */
+.sources-content a:hover {
+  color: #8d0b0b; /* blue shade */
+  text-decoration: underline;
+}
+
+/* Style for dates */
+.sources-content .date {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+/* Styling for the Bookings section */
+.bookings {
+  display: flex;                  
+  justify-content: center;        
+  align-items: center;            
+  text-align: center;             
+  color: #000000;                 
+  background: transparent;         
+  min-height: 100vh;              
+  padding: 20px;                  
+  box-sizing: border-box;         
+}
+
+.bookings-content {
+  max-width: 800px;               
+}
+
+.bookings-content h1 {
+  margin-bottom: 20px;  
+}
+
+.bookings-content p {
+  line-height: 1.6;     
+}
+
+/* --- HIDE ALL UNWANTED BOTTOM SECTIONS --- */
+.bottom-section {
+  display: none; /* Hide sections at the bottom of the page
+                    Explanation: 'display: none' removes the element
+                    from the layout and viewport, so it will not appear.
+                    Only sections with the 'bottom-section' class are affected. */
+}
+
+#interviews {
+  text-align: center; /* center text horizontally */
+}
+
+.interviews-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* start from the top, not vertically centered */
+  align-items: center;         /* center content horizontally */
+  min-height: 100vh;           /* section fills the full viewport height */
+  padding: 20px;
+}
+
+/* Add space between the heading and the text */
+.interviews-content h1 {
+  margin-bottom: 30px; /* adjust as needed */
+}
+
+/* Add spacing between paragraphs and details */
+.interviews-content p,
+.interviews-content details {
+  margin-top: 20px; /* makes layout more airy */
+}
+
+* Add some space inside the whole section */
+.images-content {
+  padding: 40px 20px; /* top/bottom and side padding */
+}
+
+/* Section padding and text styling */
+.images-content {
+  padding: 40px 20px;
+  text-align: center; /* center all text */
+  color: black;
+}
+
+/* Main heading */
+.images-content h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+/* Subheading centered and limited width */
+.images-content h2 {
+  margin: 20px auto 40px auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+/* Gallery container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* allows multiple rows */
+  justify-content: center; /* center images in each row */
+  gap: 10px; /* space between images */
+  margin: 0 auto; /* center the gallery itself */
+  max-width: 660px; /* 3 images of 200px + 2 gaps of 10px each */
+}
+
+/* Uniform image sizes */
+.gallery img {
+  width: 200px; /* 3 images per row */
+  height: 200px;
+  object-fit: cover; /* fill square without distortion */
+  display: block;
+}
+
+/* --- Individual KISS button styling --- */
+.kiss-btn {
+  display: inline-block; /* Makes the button respect width, padding, and margin */
+  padding: 12px 30px;    /* Vertical and horizontal space inside the button */
+  font-size: 20px;       /* Text size */
+  font-weight: 700;      /* Bold text for emphasis */
+  color: var(--text-color); /* Text color (from your variable, usually black) */
+  text-decoration: none; /* Removes underline */
+  border: 2px solid var(--border-color); /* Metallic or colored border */
+  border-radius: 8px;    /* Rounded corners */
+  text-shadow: 0 0 4px var(--outline-color), 0 0 8px rgba(180,180,180,0.4); /* Subtle glow effect */
+  background: transparent; /* Transparent background so gradient or page color shows */
+  transition: 0.3s;      /* Smooth hover and transform animations */
+  cursor: pointer;       /* Changes cursor to pointer on hover */
+}
+
+/* --- Hover effect --- */
+.kiss-btn:hover {
+  color: var(--accent-color); /* Changes text color on hover (e.g., red) */
+  border-color: var(--accent-color); /* Border color changes on hover */
+  box-shadow: 0 0 20px var(--outline-strong), 0 0 40px rgba(149, 18, 18, 0.6); /* Adds glowing effect on hover */
+  transform: scale(1.1); /* Slightly enlarges button on hover for visual feedback */
+}
+
+/* === Common small circle === */
+.kiss-circle {
+  position: fixed;               /* Circle stays in place even when scrolling */
+  width: 170px;                  /* Width of the circle */
+  height: 170px;                 /* Height of the circle */
+  border-radius: 50%;            /* Makes the element a perfect circle */
+  overflow: hidden;              /* Ensures content stays within circle bounds */
+  z-index: 10;                   /* Stacks circle above other page elements */
+}
+
+/* === Positioning the circles in corners === */
+.kiss-circle.tl { top: 20px; left: 20px; }    /* Top-left circle (Starchild) */
+.kiss-circle.tr { top: 20px; right: 20px; }   /* Top-right circle (Demon) */
+.kiss-circle.bl { bottom: 20px; left: 20px; } /* Bottom-left circle (Spaceman) */
+.kiss-circle.br { bottom: 20px; right: 20px; }/* Bottom-right circle (Catman) */
+
+/* ========================= */
+/* === Starchild details (Top-left) extended === */
+.kiss-circle.tl::before {
+  content:"";                    /* Pseudo-element content (empty) */
+  position:absolute;             /* Absolute positioning inside the circle */
+  top:0; left:0;                 /* Align top-left corner with circle */
+  width:100%; height:100%;       /* Fill the entire circle */
+  background:black;              /* Base color black for Starchild mask */
+  border-radius:50%;             /* Keep circular shape */
+  box-shadow:                     /* Add inner shadows for glow and depth */
+    inset 0 3px 5px rgba(255,255,255,0.1),  /* Top subtle inner glow */
+    inset 0 -3px 5px rgba(255,255,255,0.1), /* Bottom subtle inner glow */
+    inset 2px 2px 4px rgba(255,255,255,0.2);/* Diagonal inner depth shadow */
+}
+
+.kiss-circle.tl::after {
+  content:"";                    /* Pseudo-element for the star shape */
+  position:absolute; top:5%; left:5%; width:90%; height:90%; /* Slight inset inside circle */
+  background:white;              /* Main color of the star */
+  clip-path: polygon(            /* Create star shape using polygon points */
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  box-shadow: 0 0 0 2px black, inset 0 0 5px rgba(0,0,0,0.3); /* Outline + inner shading for depth */
+}
+
+/* Eyes inside star for detail */
+.kiss-circle.tl span:nth-child(1){
+  content:""; position:absolute;
+  top:40%; left:35%; width:15%; height:15%;  /* Left eye position and size */
+  background:black; border-radius:50%;        /* Black circle for eye */
+  box-shadow: 1px 1px 2px white;             /* Subtle white highlight */
+}
+.kiss-circle.tl span:nth-child(2){
+  content:""; position:absolute;
+  top:40%; left:50%; width:15%; height:15%;  /* Right eye position and size */
+  background:black; border-radius:50%;        /* Black circle for eye */
+  box-shadow: 1px 1px 2px white;             /* Subtle white highlight */
+}
+
+/* Star streak highlights inside star */
+.kiss-circle.tl span:nth-child(3){
+  content:""; position:absolute; top:25%; left:45%; width:10%; height:50%;
+  background:white; transform: rotate(15deg); border-radius:2px; /* Tilted shine line */
+}
+.kiss-circle.tl span:nth-child(4){
+  content:""; position:absolute; top:25%; left:40%; width:10%; height:50%;
+  background:white; transform: rotate(-15deg); border-radius:2px; /* Tilted shine line */
+}
+
+/* Small sparkles around star */
+.kiss-circle.tl span:nth-child(5){
+  content:""; position:absolute; top:10%; left:60%; width:5%; height:5%;
+  background:white; border-radius:50%;       /* Sparkle dot */
+}
+.kiss-circle.tl span:nth-child(6){
+  content:""; position:absolute; top:70%; left:20%; width:4%; height:4%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.tl span:nth-child(7){
+  content:""; position:absolute; top:15%; left:30%; width:3%; height:3%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.tl span:nth-child(8){
+  content:""; position:absolute; top:60%; left:50%; width:3%; height:3%;
+  background:white; border-radius:50%;
+}
+
+/* Extra lines inside star for depth and shine */
+.kiss-circle.tl span:nth-child(9){
+  content:""; position:absolute; top:30%; left:35%; width:30%; height:2%;
+  background:rgba(255,255,255,0.5); transform: rotate(20deg); border-radius:1px; /* angled highlight line */
+}
+.kiss-circle.tl span:nth-child(10){
+  content:""; position:absolute; top:50%; left:20%; width:30%; height:2%;
+  background:rgba(255,255,255,0.5); transform: rotate(-20deg); border-radius:1px; /* angled highlight line */
+}
+
+/* Small inner star points for realism */
+.kiss-circle.tl span:nth-child(11){
+  content:""; position:absolute; top:50%; left:45%; width:5%; height:5%;
+  background:white; clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); /* tiny inner star */
+}
+.kiss-circle.tl span:nth-child(12){
+  content:""; position:absolute; top:20%; left:50%; width:4%; height:4%;
+  background:white; clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); /* tiny inner star */
+}
+
+/* Tiny highlight dots for sparkle effect */
+.kiss-circle.tl span:nth-child(13){
+  content:""; position:absolute; top:5%; left:10%; width:2%; height:2%;
+  background:white; border-radius:50%;       /* tiny sparkle dot */
+}
+.kiss-circle.tl span:nth-child(14){
+  content:""; position:absolute; top:80%; left:75%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.tl span:nth-child(15){
+  content:""; position:absolute; top:70%; left:60%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+
+/* ========================= */
+/* === Demon (Top-right) Makeup Inspired by Gene Simmons with Red Accents === */
+
+/* Black base circle for Demon */
+.kiss-circle.tr::before {
+  content:""; 
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:black;                /* Base black mask */
+  border-radius:50%;              
+  box-shadow: 
+    inset 0 3px 6px rgba(255,0,0,0.1),  
+    inset 0 -3px 6px rgba(255,0,0,0.1);  
+}
+
+/* Main white shapes (tall, covering most of the circle) */
+.kiss-circle.tr::after {
+  content:""; 
+  position:absolute; top:5%; left:15%; width:70%; height:90%;  
+  background:white;                 
+  clip-path: polygon(
+    45% 0%, 55% 0%, 60% 30%, 75% 55%, 60% 80%, 55% 100%, 
+    45% 100%, 40% 80%, 25% 55%, 40% 30%
+  );                              
+  box-shadow: 
+    0 0 0 2px black,              
+    inset 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Eyes inside white shapes */
+.kiss-circle.tr span:nth-child(1){
+  content:""; position:absolute;
+  top:40%; left:35%; width:15%; height:15%;
+  background:black; border-radius:50%; /* Left eye */
+  box-shadow: 1px 1px 2px white;
+}
+.kiss-circle.tr span:nth-child(2){
+  content:""; position:absolute;
+  top:40%; left:50%; width:15%; height:15%;
+  background:black; border-radius:50%; /* Right eye */
+  box-shadow: 1px 1px 2px white;
+}
+
+/* Red accent streaks for Demon style */
+.kiss-circle.tr span:nth-child(3){
+  content:""; position:absolute; top:25%; left:35%; width:6%; height:50%;
+  background:red; border-radius:1px;   /* Prominent red streak */
+  transform: rotate(-10deg);
+}
+.kiss-circle.tr span:nth-child(4){
+  content:""; position:absolute; top:35%; left:50%; width:6%; height:50%;
+  background:red; border-radius:1px; 
+  transform: rotate(10deg);
+}
+
+/* Black spikes from forehead to mid-face */
+.kiss-circle.tr span:nth-child(5){
+  content:""; position:absolute; top:0%; left:40%; width:12%; height:25%;
+  background:black; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.kiss-circle.tr span:nth-child(6){
+  content:""; position:absolute; top:0%; left:48%; width:12%; height:25%;
+  background:black; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+/* Black spikes on cheeks */
+.kiss-circle.tr span:nth-child(7){
+  content:""; position:absolute; top:55%; left:35%; width:10%; height:30%;
+  background:black; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.kiss-circle.tr span:nth-child(8){
+  content:""; position:absolute; top:55%; left:50%; width:10%; height:30%;
+  background:black; clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+/* Extra subtle red streak on spikes for highlight */
+.kiss-circle.tr span:nth-child(9){
+  content:""; position:absolute; top:5%; left:42%; width:4%; height:20%;
+  background:red; border-radius:1px; 
+  transform: rotate(-5deg);
+}
+.kiss-circle.tr span:nth-child(10){
+  content:""; position:absolute; top:5%; left:50%; width:4%; height:20%;
+  background:red; border-radius:1px;
+  transform: rotate(5deg);
+}
+
+/* ========================= */
+/* === Spaceman full extended details (Bottom-left) === */
+
+.kiss-circle.bl::before {
+  content:""; 
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:silver;                     
+  /* Base color of Spaceman mask (metallic silver) */
+
+  border-radius:50%;                      
+  /* Keep circular shape */
+
+  box-shadow: 
+    inset 0 3px 6px rgba(255,255,255,0.3),  /* Top glow for metallic effect */
+    inset 0 -3px 6px rgba(0,0,0,0.2),       /* Bottom shadow for depth */
+    inset 3px 0 5px rgba(0,0,0,0.2),        /* Right side contour shadow */
+    inset -3px 0 5px rgba(0,0,0,0.2);       /* Left side contour shadow */
+}
+
+.kiss-circle.bl::after {
+  content:""; 
+  position:absolute; top:15%; left:20%; width:60%; height:60%;
+  background:white;                       
+  /* Main lightning bolt shape in the mask */
+
+  clip-path: polygon(
+    50% 0%, 55% 20%, 70% 20%, 60% 40%, 70% 60%, 55% 60%, 
+    50% 80%, 45% 60%, 30% 60%, 40% 40%, 30% 20%, 45% 20%
+  );
+  /* Lightning bolt shape, jagged polygon to simulate electricity */
+
+  box-shadow: 0 0 2px black, inset 1px 1px 4px rgba(0,0,0,0.3); 
+  /* Outer black outline + inner shading for depth */
+}
+/* Eyes */
+.kiss-circle.bl span:nth-child(1){
+  content:""; position:absolute;
+  top:35%; left:35%; width:15%; height:15%;
+  background:black; border-radius:50%;   /* Left eye */
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5); /* highlight */
+}
+.kiss-circle.bl span:nth-child(2){
+  content:""; position:absolute;
+  top:35%; left:50%; width:15%; height:15%;
+  background:black; border-radius:50%;   /* Right eye */
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+/* Lightning bolt texture lines for depth */
+.kiss-circle.bl span:nth-child(3){
+  content:""; position:absolute; top:20%; left:30%; width:40%; height:2%;
+  background:rgba(255,255,255,0.6); transform: rotate(15deg); border-radius:1px;
+}
+.kiss-circle.bl span:nth-child(4){
+  content:""; position:absolute; top:40%; left:25%; width:40%; height:2%;
+  background:rgba(255,255,255,0.6); transform: rotate(-10deg); border-radius:1px;
+}
+.kiss-circle.bl span:nth-child(5){
+  content:""; position:absolute; top:60%; left:35%; width:35%; height:2%;
+  background:rgba(255,255,255,0.6); transform: rotate(10deg); border-radius:1px;
+}
+
+/* Inner shadows for lightning bolt */
+.kiss-circle.bl span:nth-child(6){
+  content:""; position:absolute; top:20%; left:35%; width:5%; height:60%;
+  background:rgba(0,0,0,0.2); transform: rotate(5deg); border-radius:1px;
+}
+.kiss-circle.bl span:nth-child(7){
+  content:""; position:absolute; top:25%; left:45%; width:4%; height:50%;
+  background:rgba(0,0,0,0.2); transform: rotate(-5deg); border-radius:1px;
+}
+
+/* Sparkles around mask */
+.kiss-circle.bl span:nth-child(8){
+  content:""; position:absolute; top:10%; left:20%; width:4%; height:4%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(9){
+  content:""; position:absolute; top:70%; left:50%; width:3%; height:3%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(10){
+  content:""; position:absolute; top:30%; left:60%; width:3%; height:3%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(11){
+  content:""; position:absolute; top:55%; left:25%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+
+/* Tiny inner lightning stripes for realism */
+.kiss-circle.bl span:nth-child(12){
+  content:""; position:absolute; top:25%; left:30%; width:3%; height:50%;
+  background:white; transform: rotate(5deg); border-radius:1px;
+}
+.kiss-circle.bl span:nth-child(13){
+  content:""; position:absolute; top:30%; left:40%; width:3%; height:45%;
+  background:white; transform: rotate(-5deg); border-radius:1px;
+}
+.kiss-circle.bl span:nth-child(14){
+  content:""; position:absolute; top:40%; left:35%; width:2%; height:40%;
+  background:white; transform: rotate(10deg); border-radius:1px;
+}
+
+/* Extra tiny white dots for sparkle effect */
+.kiss-circle.bl span:nth-child(15){
+  content:""; position:absolute; top:5%; left:10%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(16){
+  content:""; position:absolute; top:80%; left:20%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(17){
+  content:""; position:absolute; top:65%; left:40%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(18){
+  content:""; position:absolute; top:30%; left:45%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(19){
+  content:""; position:absolute; top:50%; left:55%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.bl span:nth-child(20){
+  content:""; position:absolute; top:60%; left:60%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+/* ========================= */
+/* === Catman full extended details (Bottom-right) === */
+.kiss-circle.br::before {
+  content:""; 
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background:#00cc44;                 /* Green base mask */
+  border-radius:50%;                   /* Circle shape */
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.3),  /* inner shadow for depth */
+    inset 2px 0 5px rgba(0,255,68,0.2), /* subtle highlight */
+    inset -2px 0 5px rgba(0,255,68,0.2); 
+}
+
+/* Cat-eye main shape */
+.kiss-circle.br::after {
+  content:""; 
+  position:absolute; top:30%; left:10%; width:80%; height:40%;
+  background:#00ff44;                 /* cat-eye shape */
+  clip-path: polygon(
+    0% 50%, 25% 30%, 50% 50%, 75% 30%, 100% 50%, 90% 70%, 10% 70%
+  );
+  box-shadow: 0 0 2px black, inset 1px 1px 3px rgba(0,0,0,0.4); /* depth */
+}
+
+/* Whiskers */
+.kiss-circle.br span:nth-child(1){
+  content:""; position:absolute; top:40%; left:15%; width:70%; height:3%;
+  background:black;                     /* horizontal whisker line */
+  border-radius:2px;
+}
+.kiss-circle.br span:nth-child(2){
+  content:""; position:absolute; top:45%; left:15%; width:70%; height:2%;
+  background:black;                     /* lower whisker */
+  border-radius:2px;
+}
+.kiss-circle.br span:nth-child(3){
+  content:""; position:absolute; top:35%; left:15%; width:70%; height:2%;
+  background:black;                     /* upper whisker */
+  border-radius:2px;
+}
+
+/* Eyes inside cat-eye shape */
+.kiss-circle.br span:nth-child(4){
+  content:""; position:absolute; top:40%; left:35%; width:12%; height:12%;
+  background:black; border-radius:50%;  /* Left eye */
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+.kiss-circle.br span:nth-child(5){
+  content:""; position:absolute; top:40%; left:55%; width:12%; height:12%;
+  background:black; border-radius:50%;  /* Right eye */
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+/* Extra lines inside cat-eye for depth */
+.kiss-circle.br span:nth-child(6){
+  content:""; position:absolute; top:35%; left:25%; width:50%; height:2%;
+  background:rgba(0,0,0,0.2); transform: rotate(10deg); border-radius:1px;
+}
+.kiss-circle.br span:nth-child(7){
+  content:""; position:absolute; top:50%; left:20%; width:50%; height:2%;
+  background:rgba(0,0,0,0.2); transform: rotate(-10deg); border-radius:1px;
+}
+
+/* Small green highlight stripes */
+.kiss-circle.br span:nth-child(8){
+  content:""; position:absolute; top:30%; left:20%; width:40%; height:1%;
+  background:rgba(0,255,68,0.5); transform: rotate(5deg); border-radius:1px;
+}
+.kiss-circle.br span:nth-child(9){
+  content:""; position:absolute; top:55%; left:30%; width:35%; height:1%;
+  background:rgba(0,255,68,0.5); transform: rotate(-5deg); border-radius:1px;
+}
+
+/* Tiny sparkle dots around mask */
+.kiss-circle.br span:nth-child(10){
+  content:""; position:absolute; top:10%; left:20%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(11){
+  content:""; position:absolute; top:80%; left:60%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(12){
+  content:""; position:absolute; top:50%; left:40%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(13){
+  content:""; position:absolute; top:70%; left:30%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(14){
+  content:""; position:absolute; top:20%; left:50%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(15){
+  content:""; position:absolute; top:60%; left:70%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(16){
+  content:""; position:absolute; top:35%; left:55%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(17){
+  content:""; position:absolute; top:45%; left:65%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(18){
+  content:""; position:absolute; top:25%; left:60%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(19){
+  content:""; position:absolute; top:55%; left:45%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+.kiss-circle.br span:nth-child(20){
+  content:""; position:absolute; top:50%; left:55%; width:2%; height:2%;
+  background:white; border-radius:50%;
+}
+
+/* ========================= */
+/* --- Black / Light Gray Scrollbar --- */
+:root {
+  --scrollbar-track: #000000;      /* Black track */
+  --scrollbar-thumb: #cccccc;      /* Light gray thumb */
+  --scrollbar-thumb-hover: #aaaaaa; /* Slightly darker on hover */
+}
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbar-track); /* Match track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); 
+}
