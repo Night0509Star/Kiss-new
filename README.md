@@ -1,6 +1,6 @@
 🎸 KISS Tribute Web Page
 
-🔗 Live Demo: https://raw.githack.com/Night0509Star/KIss-2.1/refs/heads/main/Kiss.html
+🔗 Live Demo:[ https://raw.githack.com/Night0509Star/Kiss-new/refs/heads/main/Kiss.html ](https://raw.githack.com/Night0509Star/Kiss-new/refs/heads/main/Kiss.html)
 
 ⚠️ Note: Occasionally, white flashes may appear while scrolling. This is a known issue caused by the gradient and custom scrollbar. Despite multiple attempts (30+), the root cause has not yet been identified.
 
@@ -169,7 +169,7 @@ CSS Variables – Easy theming (--accent-color, --border-color)
 
 Clone or download the repository:
 
-git clone https://github.com/Night0509Star/KIss-2.1.git
+git clone [https://raw.githack.com/Night0509Star/Kiss-new/refs/heads/main/Kiss.html](https://raw.githack.com/Night0509Star/Kiss-new/refs/heads/main/Kiss.html)
 
 Open Kiss.html (or index.html) in any modern browser.
 
